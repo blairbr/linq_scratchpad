@@ -1,0 +1,11 @@
+C:\Users\Blair\source\repos\LINQ_Scratchpad\LINQ_Scratchpad\obj\Debug\netcoreapp3.1\LINQ_Scratchpad.csprojAssemblyReference.cache
+C:\Users\Blair\source\repos\LINQ_Scratchpad\LINQ_Scratchpad\obj\Debug\netcoreapp3.1\LINQ_Scratchpad.AssemblyInfoInputs.cache
+C:\Users\Blair\source\repos\LINQ_Scratchpad\LINQ_Scratchpad\obj\Debug\netcoreapp3.1\LINQ_Scratchpad.AssemblyInfo.cs
+C:\Users\Blair\source\repos\LINQ_Scratchpad\LINQ_Scratchpad\bin\Debug\netcoreapp3.1\LINQ_Scratchpad.exe
+C:\Users\Blair\source\repos\LINQ_Scratchpad\LINQ_Scratchpad\bin\Debug\netcoreapp3.1\LINQ_Scratchpad.deps.json
+C:\Users\Blair\source\repos\LINQ_Scratchpad\LINQ_Scratchpad\bin\Debug\netcoreapp3.1\LINQ_Scratchpad.runtimeconfig.json
+C:\Users\Blair\source\repos\LINQ_Scratchpad\LINQ_Scratchpad\bin\Debug\netcoreapp3.1\LINQ_Scratchpad.runtimeconfig.dev.json
+C:\Users\Blair\source\repos\LINQ_Scratchpad\LINQ_Scratchpad\bin\Debug\netcoreapp3.1\LINQ_Scratchpad.dll
+C:\Users\Blair\source\repos\LINQ_Scratchpad\LINQ_Scratchpad\bin\Debug\netcoreapp3.1\LINQ_Scratchpad.pdb
+C:\Users\Blair\source\repos\LINQ_Scratchpad\LINQ_Scratchpad\obj\Debug\netcoreapp3.1\LINQ_Scratchpad.dll
+C:\Users\Blair\source\repos\LINQ_Scratchpad\LINQ_Scratchpad\obj\Debug\netcoreapp3.1\LINQ_Scratchpad.pdb

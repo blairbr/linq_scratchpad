@@ -1,5 +1,7 @@
 ﻿using System;
-
+using System.Collections.Generic;
+using System.Linq;
+//ctrl K + D to format
 namespace LINQ_Scratchpad
 {
     public class Program
@@ -7,22 +9,26 @@ namespace LINQ_Scratchpad
 
         public static void Main(string[] args)
         {
-            Dog fido = new Dog();
-
-            Dog rex = new Dog
+            List<Dog> listOfDogs = new List<Dog>()
             {
-                Name = "Rex",
-                Skills = { "playing ball", "sniffing" }
+            new Dog("Rex", new List<string> {"ball", "sniffing"}),
+            new Dog("Peanut", new List<string> { "Frisbee", "fetch" })
             };
+            GetDogSkills(listOfDogs);
 
         }
 
-        public void GetSkills() {
-        }
-        }
+        public static void GetDogSkills(List<Dog> listOfDogs)
+        {
+            var getallpeanuts = listOfDogs.Where(c => c.Name == "Peanut").Select(s => s.Name);
 
-  
+            //var selectedDoggos = listOfDogs.SelectMany(i => i.Name);
+            Console.WriteLine(getallpeanuts);
+        }
     }
+
+
+}
 
             //public async Task<List<ExtensionValidationSetNode>> GetAllExtensionValidationSetNodes(IExtension source, CancellationToken cancellationToken)
             //{
@@ -88,6 +94,4 @@ namespace LINQ_Scratchpad
             //    }
             //    return result;
             //}
-        }
-    }
 
