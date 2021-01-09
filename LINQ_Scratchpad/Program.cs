@@ -21,6 +21,8 @@ namespace LINQ_Scratchpad
             FilterDogsByNameUsingWHERE(listOfDogs, "Rex");
 
             FormatDogInfoUsingSELECT(listOfDogs);
+
+            PrintDogsMadSkillz(listOfDogs);
         }
 
         // .Where
@@ -34,6 +36,7 @@ namespace LINQ_Scratchpad
         }
 
         // .Select
+        // Select() takes each source element, transforms it, and returns a sequence of the transformed values. It acts like the map() function in Javascript.
         public static void FormatDogInfoUsingSELECT(List<Dog> listOfDogs)
         {
             var formattedDogInfo = listOfDogs.Select(d => $"{d.Name} is a {d.Age} year-old cutie."); //who loves to {d.Skills}");
@@ -42,10 +45,15 @@ namespace LINQ_Scratchpad
                 Console.WriteLine(dog);
             }
         }
+        // .SelectMany
+
+        public static void PrintDogsMadSkillz(List<Dog> listOfDogs) {
+            var listOfAllDogsSkills = listOfDogs.SelectMany(d => d.Skills);
+            
+        }
 
         // .GroupBy
 
-        // .SelectMany
 
     }
 }
