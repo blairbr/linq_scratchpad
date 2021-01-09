@@ -9,10 +9,13 @@ namespace LINQ_Scratchpad
         public string Name { get; set; }
         public List<string> Skills { get; set; }
 
-        public Dog(string name, List<string> skills)
+        public int Age { get; set;  }
+
+        public Dog(string name, List<string> skills, int age)
         {
             Name = name;
             Skills = skills;
+            Age = age;
         }
     }
 }
