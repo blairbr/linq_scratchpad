@@ -20,10 +20,15 @@ namespace LINQ_Scratchpad
             // calling this method and passing in Rex will filter on Rex
             FilterDogsByNameUsingWHERE(listOfDogs, "Rex");
 
+            JustSelectDogNames(listOfDogs);
+
             FormatDogInfoUsingSELECT(listOfDogs);
 
             PrintDogsAllDogsSkills(listOfDogs);
+
+            GroupDogsBySomething(listOfDogs);
         }
+
 
         // .Where
         public static void FilterDogsByNameUsingWHERE(List<Dog> listOfDogs, string nameToFilterOn = "Peanut")
@@ -37,14 +42,24 @@ namespace LINQ_Scratchpad
 
         // .Select
         // Select() takes each source element, transforms it, and returns a sequence of the transformed values. It acts like the map() function in Javascript.
+        public static void JustSelectDogNames(List<Dog> listOfDogs)
+        {
+            var listOfDogNames = listOfDogs.Select(d => d.Name); //who loves to {d.Skills}");
+            Console.WriteLine("print all the dogs' names: ");
+            foreach (var name in listOfDogNames)
+            {
+                Console.WriteLine(name);
+            }
+        }
         public static void FormatDogInfoUsingSELECT(List<Dog> listOfDogs)
         {
-            var formattedDogInfo = listOfDogs.Select(d => $"{d.Name} is a {d.Age} year-old cutie."); //who loves to {d.Skills}");
+            var formattedDogInfo = listOfDogs.Select(d => $"{d.Name} is a {d.Age} year-old cutie."); //who loves to {d.Skills}"); //groupby/selectmany
             foreach (var dog in formattedDogInfo)
             {
                 Console.WriteLine(dog);
             }
         }
+
         // .SelectMany
         //The SelectMany in LINQ is used to project each element of a sequence to an IEnumerable<T> and then flatten the resulting sequences into 
         //one sequence.That means the SelectMany operator combines the records from a sequence of results and then converts it into one result.
@@ -69,8 +84,14 @@ namespace LINQ_Scratchpad
         }
 
         // .GroupBy
+        private static void GroupDogsBySomething(List<Dog> listOfDogs)
+        {
+            var grouping = listOfDogs.GroupBy(d => d.Age);
+
+        }
 
 
+        //Then add stuffs to a dictionary
     }
 }
 
