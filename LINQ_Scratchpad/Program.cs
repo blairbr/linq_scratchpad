@@ -12,7 +12,8 @@ namespace LINQ_Scratchpad
             List<Dog> listOfDogs = new List<Dog>()
             {
                 new Dog("Rex", new List<string> {"ball", "sniffing", "Frisbee"}, 2),
-                new Dog("Peanut", new List<string> { "Frisbee", "fetch" }, 7)
+                new Dog("Peanut", new List<string> { "Frisbee", "fetch" }, 7),
+                new Dog("Lulu", new List<string> { "Snacking", "jumping through hoops" }, 7)
             };
             // calling without the optional parameter will default to filtering on the name Peanut
             FilterDogsByNameUsingWHERE(listOfDogs);
@@ -26,7 +27,7 @@ namespace LINQ_Scratchpad
 
             PrintDogsAllDogsSkills(listOfDogs);
 
-            GroupDogsBySomething(listOfDogs);
+            GroupDogsByAge(listOfDogs);
         }
 
 
@@ -84,14 +85,16 @@ namespace LINQ_Scratchpad
         }
 
         // .GroupBy
-        private static void GroupDogsBySomething(List<Dog> listOfDogs)
+        private static void GroupDogsByAge(List<Dog> listOfDogs)
         {
             var grouping = listOfDogs.GroupBy(d => d.Age);
-
+            //the return type is a GroupedEnumerable, so with three dogs, one aged 2 years and two dogs aged 7 years, there are two groups (key of 2 and key of 7) and the one w key of 1 has one dog in it, the other has two dogs  
+            var dictionaryOfDogs = new Dictionary<int, List<Dog>>();
+            dictionaryOfDogs = grouping.ToDictionary(g => g.Key, g => g.ToList());
+            //convert to dictionary where key is the dog's age and the value is the dog object
         }
 
 
-        //Then add stuffs to a dictionary
     }
 }
 
