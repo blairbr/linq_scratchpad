@@ -84,7 +84,7 @@ namespace LINQ_Scratchpad
 
         }
 
-        // .GroupBy
+        // .GroupBy and .ToDictionary
         private static void GroupDogsByAge(List<Dog> listOfDogs)
         {
             var grouping = listOfDogs.GroupBy(d => d.Age);
@@ -93,7 +93,16 @@ namespace LINQ_Scratchpad
             dictionaryOfDogs = grouping.ToDictionary(g => g.Key, g => g.ToList());
             //convert to dictionary where key is the dog's age and the value is the dog object
         }
+        //cant believe I never realized this earlier, .Count is a property on a List and is a method on an IEnumerable
+        private static void PrintCounts(List<Dog> listOfDogs)
+        {
+            int numberOfDogs = listOfDogs.Count;
+            Console.WriteLine($"There are {numberOfDogs} in the list.");
 
+            IEnumerable<Dog> ienumOfDogs = listOfDogs.AsEnumerable();
+            var totalNumOfDogs = ienumOfDogs.Count();
+            Console.WriteLine($"There are {totalNumOfDogs} in the ienumerable of dogs".);
+        }
 
     }
 }
