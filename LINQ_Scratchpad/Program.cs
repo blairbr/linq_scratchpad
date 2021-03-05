@@ -28,6 +28,9 @@ namespace LINQ_Scratchpad
             PrintDogsAllDogsSkills(listOfDogs);
 
             GroupDogsByAge(listOfDogs);
+
+            DiscardOperatorExampleWithTryParse();
+            
         }
 
 
@@ -101,7 +104,14 @@ namespace LINQ_Scratchpad
 
             IEnumerable<Dog> ienumOfDogs = listOfDogs.AsEnumerable();
             var totalNumOfDogs = ienumOfDogs.Count();
-            Console.WriteLine($"There are {totalNumOfDogs} in the ienumerable of dogs".);
+            Console.WriteLine($"There are {totalNumOfDogs} in the ienumerable of dogs.");
+        }
+
+        private static void DiscardOperatorExampleWithTryParse() {
+            bool isHelloAnInt = int.TryParse("hello", out _);
+            if (!isHelloAnInt) {
+                Console.WriteLine("using a discard operator here because out has no reason to have a type or a name");
+            }
         }
 
     }
